@@ -21,8 +21,8 @@ export default function ViewProfile() {
     function getUsers() {
       axios.get('https://api.github.com/repos/IshanLahiru/user-profile-demo/contents/front-end/data.md').then(function(response) {
       const d = JSON.parse(atob(response.data.content));      
-      console.log(d);
-            setUsers(response.data);
+      console.log(d[0]);
+            setUsers(d[0]);
         });
     }
 
@@ -41,14 +41,14 @@ export default function ViewProfile() {
             <div className="text-center">
               {/* Add your profile picture here */}
               <img
-                src={user.profilePicture}
-                alt={user.username}
+                src={users.profilePicture}
+                alt={users.username}
                 className="w-32 h-32 rounded-full mx-auto"
               />
             </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-gray-800">
-                {user.username}
+                {users.username}
               </h2>
               <div className="mt-4">
                 <p>
