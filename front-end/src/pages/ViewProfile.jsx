@@ -19,7 +19,7 @@ export default function ViewProfile() {
     }, []);
 
     function getUsers() {
-      axios.get('https://api.github.com/repos/IshanLahiru/ishanlahiru.github.io/contents/data.md').then(function(response) {
+      axios.get('https://api.github.com/repos/IshanLahiru/user-profile-demo/contents/front-end/data.md').then(function(response) {
             console.log(response.data);
             setUsers(response.data);
         });
