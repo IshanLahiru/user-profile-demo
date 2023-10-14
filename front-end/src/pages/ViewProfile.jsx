@@ -20,8 +20,9 @@ export default function ViewProfile() {
 
     function getUsers() {
       axios.get('https://api.github.com/repos/IshanLahiru/user-profile-demo/contents/front-end/data.md').then(function(response) {
-            console.log(response.data);
-            setUsers(response.data);
+      const d = atob(response.data.content);      
+      console.log(d);
+            setUsers();
         });
     }
 

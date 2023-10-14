@@ -1,4 +1,5 @@
-{
+[
+    {
     username: "ila",
     f_name: "John",
     l_name: "Doe",
@@ -6,3 +7,4 @@
     contact: "123-456-7890",
     profilePicture: "https://via.placeholder.com/150", // Placeholder image URL
 }
+]
